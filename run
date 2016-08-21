@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if ! [ -f "$1" ]; then
+  echo "please specify the filename of the CSV. e.g.:"
+  echo
+  echo "./run file.csv"
+  exit 1
+fi
+
+docker run -v "$PWD":"$PWD" -w "$PWD" -it dbank-to-qif /app/convert $1

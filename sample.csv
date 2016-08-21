@@ -1,0 +1,5 @@
+sep=;
+Date;Counterparty;Description;Category;Account;Amount
+Mar 8, 2016;Employer;Salary Payment;Income / Salary;00;4563.00
+Jul 9, 2016;Merchant1;Order No 123876374;Furniture / Home Accessories;00;-423.45
+Feb 10, 2016;Merchant2;Order No 068489859;Travel Expenses;00;-75.46
