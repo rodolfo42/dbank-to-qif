@@ -7,4 +7,10 @@ if ! [ -f "$1" ]; then
   exit 1
 fi
 
-docker run -v "$PWD":"$PWD" -w "$PWD" -it dbank-to-qif /app/convert $1
+target_dir=$(dirname $1)
+if [ "$target_dir" = "." ]; then
+  target_dir=$PWD
+fi
+target_file=$(basename $1)
+
+docker run -v "$target_dir":"$target_dir" -w "$target_dir" -it dbank-to-qif /app/convert $target_file
