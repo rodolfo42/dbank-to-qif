@@ -21,15 +21,16 @@ process.stdin.on('end', () => {
   console.log('!Type:Bank');
 
   txs.forEach(function (tx) {
+    var date = new Date(tx.Date).toLocaleDateString();
     balance = balance + parseFloat(tx.Amount);
     updown[(/^-/.test(tx.Amount) ? '-' : '+')] += parseFloat(tx.Amount);
 
     const desc = /^-$/.test(tx.Description) ? false : tx.Description;
 
-    console.log(`D${tx.Date}`);
+    console.log(`D${date}`);
     console.log(`T${tx.Amount}`);
     if(desc) { console.log(`M${desc}`); }
-    console.log(`L${tx.Category}`);
+    // console.log(`L${tx.Category}`);
     console.log(`P${tx.Counterparty}`);
     console.log('^');
   });
