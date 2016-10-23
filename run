@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 if ! [ -f "$1" ]; then
   echo "please specify the filename of the CSV. e.g.:"
@@ -7,7 +7,7 @@ if ! [ -f "$1" ]; then
   exit 1
 fi
 
-target_dir=$(dirname $1)
+target_dir=$(dirname ${1:A})
 if [ "$target_dir" = "." ]; then
   target_dir=$PWD
 fi
