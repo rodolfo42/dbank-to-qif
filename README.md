@@ -1,6 +1,6 @@
 # Deutsche Bank CSV to QIF converter
 
-Warning: written in a rush. no 'nice code' here.
+_Warning: written in a rush. no 'nice code' here._
 
 ## installation
 
@@ -18,7 +18,7 @@ This is implemented to work with the CSV file you get from `Deutsche Bank Finanz
 You have two options:
 
 - call the `run` script from the folder where the CSV file is in
-- link the `run` script to your `PATH` (e.g. `ln -s [/path/to/dbank-to-qif]/run ~/bin/dbank_to_qif`)
+- link the `run` script to your `PATH` via `make link`
 
 And then:
 
